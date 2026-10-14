@@ -24,7 +24,7 @@ const D=[{"n": 1, "t": "Vinodling och Vinframställning", "items": [{"q": "Vad b
 const app=document.getElementById('app');
 const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const L='ABCD';let st=null;
-function home(){st=null;let h='<h1>🍷 Winquiz</h1><p class="s">Välj ett kapitel. Frågorna kommer i slumpad ordning och rätt svar byter plats varje gång.</p>';
+function home(){st=null;let h='<h1>🍷 Vinquiz</h1><p class="s">Välj ett kapitel. Frågorna kommer i slumpad ordning och rätt svar byter plats varje gång.</p>';
 D.forEach((c,i)=>{const r=c.items.length&&c.items.every(x=>x.w&&x.w.length==3);
 h+=`<button class="b ${r?'':'off'}" ${r?`onclick="start(${i})"`:'disabled'}>K${c.n} · ${c.t}<small>${c.items.length} frågor${r?'':' · alternativ kommer snart'}</small></button>`});
 app.innerHTML=h}
